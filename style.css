@@ -1,3 +1,15 @@
+@font-face {
+    font-family: regular;
+    src: url(fonts/ReadexPro-Regular.ttf);
+}
+@font-face {
+    font-family: medium;
+    src: url(fonts/ReadexPro-Medium.ttf);
+}
+@font-face {
+    font-family: semiBold;
+    src: url(fonts//ReadexPro-SemiBold.ttf);
+}
 *{
     margin: 0;
     padding: 0;
@@ -5,4 +17,36 @@
 }
 html{
     scroll-behavior: smooth;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.page-navigation-mobile{
+    position: relative;
+    top: 0;
+    display: flex;
+    width: 100%;
+    border: 2px solid red;
+    background-color: black;
+}
+.mobile-nav-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 20px;
+}
+.mobile-nav-top svg{
+    color: white;
+}
+.mobile-logo{
+    width: 55px;
+}
+.menu-popup{
+    display: none;
 }
