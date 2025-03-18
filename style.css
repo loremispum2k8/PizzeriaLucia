@@ -57,7 +57,7 @@ body{
 
 
 .menu-popup{
-    display: none;
+    display: flex;
     flex-direction: column;
     background-color: white;
     position:absolute;
@@ -66,6 +66,8 @@ body{
     height: 100vh;
     width: 180px;
     padding: 20px 20px 20px 50px;
+    transform: translateX(180px);
+    z-index: 3;
 }
 .popup-dark-bg{
     display: none;
@@ -74,7 +76,53 @@ body{
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: hsla(0, 0%, 10%, 0.7);
+    background-color: #707070b3;
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    z-index: 2;
+}
+
+@keyframes hideBackground{
+    0%{opacity: 100%;}
+    100%{opacity: 0%; display:none;}
+}
+@keyframes showBackground{
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+.show{
+    animation-name: showBackground;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.hide{
+    animation-name: hideBackground;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideMenu{
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(180px);}
+}
+@keyframes showMenu{
+    0%{transform: translateX(180px);}
+    100%{transform: translateX(0px);}
+}
+
+.showMenu{
+    animation-name: showMenu;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.hideMenu{
+    animation-name: hideMenu;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 
@@ -82,6 +130,7 @@ body{
 .menu-popup svg{
     align-self: flex-end;
     cursor: pointer;
+    z-index: 3;
 }
 .mobile-menu-links{
     display: flex;
@@ -90,6 +139,12 @@ body{
     font-size: 14px;
     font-family: regular;
     margin-top: 140px;
+}
+.mobile-menu-links a, .language-container a{
+    transition: 0.1s all;
+}
+.mobile-menu-links a:hover, .language-container a:hover{
+    color: #e91b10;
 }
 .language-container{
     display: flex;
@@ -224,7 +279,7 @@ header{
         font-family: regular;
     }
     .desktop-menus a, .desktop-languages a{
-        transition: all 0.1s;
+        transition: 0.1s all;
     }
     .desktop-menus a:hover, .desktop-languages a:hover{
         color: #e91b10;
@@ -285,4 +340,5 @@ header{
         margin-bottom: 30px;
         gap: 35px;
     }
+    
 }
