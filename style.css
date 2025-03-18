@@ -39,13 +39,13 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 15px 20px;
+    padding: 20px 25px;
 }
 .mobile-nav-top svg{
     color: white;
 }
 .mobile-logo{
-    width: 65px;
+    width: 70px;
 }
 .menu-popup{
     display: none;
