@@ -160,14 +160,14 @@ header{
 }
 .dot{
     cursor: pointer;
-    height: 6px;
-    width: 6px;
+    height: 9px;
+    width: 9px;
     border-radius: 50%;
     background-color: hsla(0, 0%, 88%, 0.5);
 }
 .bigDot{
     cursor:initial;
-    height: 9px;
-    width: 9px;
+    height: 12px;
+    width: 12px;
     background-color: white;
 }
