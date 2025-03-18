@@ -10,6 +10,10 @@
     font-family: semiBold;
     src: url(fonts//ReadexPro-SemiBold.ttf);
 }
+a{
+    text-decoration: none;
+    color: initial;
+}
 *{
     margin: 0;
     padding: 0;
@@ -30,7 +34,6 @@ body{
     top: 0;
     display: flex;
     width: 100%;
-    border: 2px solid red;
     background-color: black;
 }
 .mobile-nav-top{
@@ -48,5 +51,44 @@ body{
     width: 70px;
 }
 .menu-popup{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    position:absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 180px;
+    padding: 20px 20px 20px 50px;
+}
+.menu-popup svg{
+    align-self: flex-end;
+    margin-bottom: auto;
+}
+.mobile-menu-links{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 14px;
+    font-family: regular;
+    margin-bottom: auto;
+}
+.language-container{
+    display: flex;
+    flex-wrap: row;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+}
+.languge-off{
+    color: #9f9f9f;
+}
+.popup-dark-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(0, 0%, 10%, 0.7);
 }
