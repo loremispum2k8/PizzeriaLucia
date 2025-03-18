@@ -53,7 +53,6 @@ body{
 .menu-popup{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: white;
     position:absolute;
     top: 0;
@@ -64,7 +63,6 @@ body{
 }
 .menu-popup svg{
     align-self: flex-end;
-    margin-bottom: auto;
 }
 .mobile-menu-links{
     display: flex;
@@ -72,7 +70,7 @@ body{
     gap: 40px;
     font-size: 14px;
     font-family: regular;
-    margin-bottom: auto;
+    margin-top: 140px;
 }
 .language-container{
     display: flex;
