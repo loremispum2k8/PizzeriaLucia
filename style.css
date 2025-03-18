@@ -144,7 +144,7 @@ header{
 }
 .option-big-text{
     font-family: semiBold;
-    font-size: clamp(30px,8.75vw,100px);
+    font-size: clamp(30px,8.75vw,105px);
 }
 .dots-container{
     display: flex;
@@ -170,4 +170,119 @@ header{
     height: 12px;
     width: 12px;
     background-color: white;
+}
+.page-navigation-desktop{
+    display: none;
+}
+
+
+@media screen and (min-width:1100px){
+    .testDiv{
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height:10000px;
+    }
+    .page-navigation-desktop{
+        display: flex;
+        position: sticky;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        flex-direction: row;
+        padding: 15px 40px 18px 40px;
+        background-color: white;
+        justify-content: space-between;
+        align-items: end;
+        height: 112px;
+    }
+    .dektop-row{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .page-navigation-mobile{
+        display: none;
+    }
+    .dekstop-logo{
+        max-height: 80px;
+        max-width: 138px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        cursor: pointer;
+        transform: translate(-50%, -55%);
+    }
+    .desktop-menus{
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+        font-size: 14px;
+        font-family: regular;
+    }
+    .desktop-menus a, .desktop-languages a{
+        transition: all 0.1s;
+    }
+    .desktop-menus a:hover, .desktop-languages a:hover{
+        color: #e91b10;
+    }
+    .dektop-right-side-menu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+    .desktop-languages{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        font-size: 18px;
+        font-family: regular;
+    }
+    .dektop-basket-button{
+        width: 130px;
+        height: 34px;
+        background-color: #D7180E;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 24px 0px 20px;
+        border-radius: 35px;
+        transition: all 0.1s;
+    }
+    .basket-total{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+    }
+    .lei, .basket-number{
+        font-family: medium;
+        font-size: 16px;
+    }
+    .dektop-basket-button:hover{
+        background-color: #e91b10;
+    }
+    .dot{
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: hsla(0, 0%, 88%, 0.5);
+    }
+    .bigDot{
+        cursor:initial;
+        height: 14px;
+        width: 14px;
+        background-color: white;
+    }
+    .dots-container{
+        margin-bottom: 30px;
+        gap: 35px;
+    }
 }
