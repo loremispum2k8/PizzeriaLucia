@@ -28,6 +28,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow-y: auto
 }
 .page-navigation-mobile{
     position: absolute;
@@ -240,8 +241,9 @@ header{
     flex-direction: row;
     overflow-x:scroll;
     height: 64px;
-    top: 0;
+    top: env(safe-area-inset-top, 0);
     border-bottom: 2px solid #D8D8D8;
+    z-index: 2;
 }
 .inner-menu{
     display: flex;
