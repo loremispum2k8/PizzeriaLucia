@@ -22,14 +22,16 @@ a{
 html{
     scroll-behavior: smooth;
 }
+.stop-scroll{
+    overflow: hidden;
+}
 
 
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: auto
 }
 .page-navigation-mobile{
     position: absolute;
