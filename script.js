@@ -16,7 +16,6 @@ menuBurger[0].addEventListener('click',()=>{
 exitMenu[0].addEventListener('click',()=>{
     menu[0].classList.add('hideMenu');
     menu[0].classList.remove('showMenu');
-    menu[0].style.display = 'none';
     darkBackground[0].classList.add('hide');
     darkBackground[0].classList.remove('show');
     document.body.classList.remove('stop-scroll');
