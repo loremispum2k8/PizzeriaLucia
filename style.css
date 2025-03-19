@@ -28,7 +28,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow-y: auto
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .page-navigation-mobile{
     position: absolute;
@@ -68,7 +69,7 @@ body{
     width: 180px;
     padding: 20px 20px 20px 50px;
     transform: translateX(180px);
-    z-index: 3;
+    z-index: 999;
 }
 .popup-dark-bg{
     display: none;
@@ -80,7 +81,7 @@ body{
     background-color: #707070b3;
     backdrop-filter: blur(2px);
     opacity: 0;
-    z-index: 2;
+    z-index: 899;
 }
 
 @keyframes hideBackground{
@@ -243,7 +244,7 @@ header{
     height: 64px;
     top: env(safe-area-inset-top, 0);
     border-bottom: 2px solid #D8D8D8;
-    z-index: 2;
+    z-index: 1;
 }
 .inner-menu{
     display: flex;
@@ -284,13 +285,14 @@ header{
         width: 100%;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: 100;
         flex-direction: row;
         padding: 15px 40px 18px 40px;
         background-color: white;
         justify-content: space-between;
         align-items: end;
         height: 112px;
+        border-bottom: 2px solid #D8D8D8;
     }
     .dektop-row{
         display: flex;
@@ -386,6 +388,7 @@ header{
     header{
         height: 100vh;
         overflow: hidden;
+        z-index: 12;
     }
     .div-options-container{
         width: 100%;
@@ -402,5 +405,49 @@ header{
         height: 100%;
         object-fit: cover;
         filter: brightness(40%) saturate(140%) contrast(95%);
+    }
+
+    
+    .menu-navigation::-webkit-scrollbar{
+        display: none;
+    }
+    .menu-navigation{
+        position: sticky;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        overflow-x:scroll;
+        height: 182px;
+        top: env(safe-area-inset-top, 0);
+        border-bottom: 2px solid #D8D8D8;
+        z-index: 2;
+        margin-top: -112px;
+    }
+    .inner-menu{
+        display: flex;
+        flex-direction: row;
+        align-items:end;
+        height: 70px;
+        padding: 0px 0px 0px 30px;
+        min-width: 700px;
+        gap: 50px;
+        z-index: 99;
+        
+    }
+    .inner-menu div{
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .menu-link{
+        text-align: center;
+        width: fit-content;
+        font-family: regular;
+        font-size:14px;
+    }
+    .link-over{
+        border-bottom: 2px solid #CA1C11;
     }
 }
