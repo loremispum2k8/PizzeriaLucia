@@ -306,7 +306,9 @@ header{
     /*border: 2px solid orange;*/
     border-radius: 20px;
     box-shadow: 0px 0px 24px -2px hsla(0, 0%, 58%, 0.25);
-
+}
+.food-card:hover{
+    box-shadow: 0px 0px 34px -2px hsla(0, 0%, 58%, 0.5);
 }
 .food-image{
     width: 114px;
@@ -371,6 +373,141 @@ header{
     background-color: #159735;
     border-radius: 20px;
 }
+
+.customPizza-padder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 20px;
+}
+.customPizza-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D7180E;
+    border-radius: 20px;
+    padding: 40px 0px;
+    gap: 60px;
+    box-shadow: 0px 0px 20px 0px rgb(199, 199, 199);
+    transition: all 0.1s;
+}
+.customPizza-container:hover{
+    box-shadow: 0px 0px 26px 0px rgb(148, 148, 148);
+}
+.customPizza-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;;
+    gap:30px;
+    max-width: 306px;
+}
+.customPizza-title{
+    font-size: clamp(30px,5vw,46px);
+    font-family:semiBold;
+    color:White;
+}
+.customPizza-desc{
+    line-height: 170%;
+    font-size: 12px;
+    color: white;
+    font-family: regular;
+    font-weight: 400;
+}
+.customPizza-desc span{
+    font-size: 14px;
+    font-family: semiBold;
+    color: white;
+}
+.customPizza-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: white;
+    color: #D7180E;
+    width: 230px;
+    height: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.customPizza-btn:hover{
+    transform: scale(1.03);
+}
+.customPizza-btn p{
+    font-size: 14px;
+    font-family: medium;
+}
+.customPizza-mobile{
+    width: 100%;
+}
+.customPizza-medium{
+    display: none;
+}
+.customPizza-desktop{
+    display: none;
+}
+
+
+@media screen and (min-width:900px){
+    .customPizza-container{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #D7180E;
+        border-radius: 20px;
+        padding: 0px 40px 0px 0px;
+        gap: 60px;
+        height: 400px;
+    }
+    .customPizza-text{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align:start;
+        padding: 0px 0px 0px 40px;
+        gap:30px;
+        max-width: 450px;
+    }
+    .customPizza-title{
+        font-size: clamp(30px,5vw,46px);
+
+    }
+    .customPizza-desc{
+        font-size: clamp(12px,1.5vw,14px);
+    }
+    .customPizza-desc span{
+        font-size: clamp(14px,1.5vw,16px);
+    }
+    .customPizza-btn{
+        gap: 8px;
+        width: 230px;
+        height: 45px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    .customPizza-btn p{
+        font-size: 14px;
+        font-family: medium;
+    }
+    .customPizza-mobile{
+        display: none;
+    }
+    .customPizza-medium{
+        height: 100%;
+        display: inline;
+    }
+    .customPizza-desktop{
+        display: none;
+    }
+}
+
 
 
 @media screen and (min-width:1100px){
@@ -569,7 +706,7 @@ header{
         /*border: 2px solid orange;*/
         border-radius: 20px;
         box-shadow: 0px 0px 24px -2px hsla(0, 0%, 58%, 0.25);
-    
+        transition: all 0.1s;
     }
     .food-image{
         width: 114px;
@@ -623,5 +760,62 @@ header{
         width: 169px;
         height: 36px;
         border-radius: 10px;
+    }
+
+
+    .customPizza-padder{
+        padding: 0px 40px 0px 40px;
+    }
+    .customPizza-container{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #D7180E;
+        border-radius: 20px;
+        padding: 0px 40px 0px 0px;
+        gap: 60px;
+        height: 400px;
+    }
+    .customPizza-text{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align:start;
+        padding: 0px 0px 0px 40px;
+        gap:50px;
+        max-width: 540px;
+    }
+    .customPizza-title{
+        font-size: clamp(30px,5vw,46px);
+
+    }
+    .customPizza-desc{
+        font-size: 14px;
+    }
+    .customPizza-desc span{
+        font-size: 16px
+    }
+    .customPizza-btn{
+        gap: 8px;
+        width: 230px;
+        height: 45px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    .customPizza-btn p{
+        font-size: 16px;
+        font-family: medium;
+    }
+    .customPizza-mobile{
+        display: none;
+    }
+    .customPizza-medium{
+        display: none;
+    }
+    .customPizza-desktop{
+        height: 100%;
+        display: inline;
     }
 }
