@@ -303,6 +303,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 30px 26px 30px 0px;
+    height: 300px;
     /*border: 2px solid orange;*/
     border-radius: 20px;
     box-shadow: 0px 0px 24px -2px hsla(0, 0%, 58%, 0.25);
@@ -386,7 +387,7 @@ header{
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background-color: #D7180E;
+    background:linear-gradient(-45deg,#d92a21 0%,#D7180E 50%,#ca281f 100%);
     border-radius: 20px;
     padding: 40px 0px;
     gap: 60px;
