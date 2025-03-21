@@ -281,7 +281,7 @@ header{
 .foodsAndTitle-container{
     display: flex;
     flex-direction: column;
-    padding: clamp(60px, 8vw ,160px) 20px;
+    padding: clamp(60px, 8vw ,160px) 20px 0px 20px;
     /*border: 2px solid blue;*/
     gap: 30px;
     width: 100%;
@@ -380,7 +380,7 @@ header{
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0px 20px;
+    padding: clamp(60px, 8vw ,160px) 20px 0px 20px;
 }
 .customPizza-container{
     display: flex;
@@ -395,7 +395,7 @@ header{
     transition: all 0.1s;
 }
 .customPizza-container:hover{
-    box-shadow: 0px 0px 26px 0px rgb(148, 148, 148);
+    box-shadow: 0px 0px 35px 0px rgb(148, 148, 148);
 }
 .customPizza-text{
     display: flex;
@@ -689,7 +689,7 @@ header{
 
     .foodsAndTitle-container{
         gap: 50px;
-        padding: clamp(60px, 8vw ,160px) 40px;
+        padding: clamp(60px, 8vw ,160px) 40px 0px 40px;
     }
     .foods-grid-container{
         display: grid;
@@ -765,7 +765,7 @@ header{
 
 
     .customPizza-padder{
-        padding: 0px 40px 0px 40px;
+        padding: clamp(60px, 8vw ,160px) 40px 0px 40px;
     }
     .customPizza-container{
         display: flex;
