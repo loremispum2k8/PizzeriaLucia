@@ -45,3 +45,33 @@ window.addEventListener('scroll',()=>{
         }
     }
 })
+
+
+
+let headerDots = document.getElementsByClassName('dot');
+let headerOption = document.getElementsByClassName('header-option');
+
+
+for(let i = 0; i<headerDots.length; i++){
+    headerDots[i].addEventListener('click',()=>{
+
+        console.log(i)
+        if(!(headerDots[i].classList.contains('bigDot'))){
+            headerDots[i].classList.add('bigDot');
+            headerOption[i].classList.remove('hide-option')
+            headerOption[i].classList.add('SHOW_HEADER');
+            headerOption[i].classList.remove('HIDE_HEADER');
+            headerOption[i].style.display = 'flex';
+
+            for(let j = 0; j<headerDots.length; j++){
+                if(j !== i){
+                    headerDots[j].classList.remove('bigDot');
+                    headerOption[j].classList.remove('SHOW_HEADER');
+                    headerOption[j].classList.add('HIDE_HEADER');
+                    headerOption[j].style.display = 'none';
+                    headerOption[j].classList.add('hide-option')
+                }
+            }
+        }
+    })
+}
