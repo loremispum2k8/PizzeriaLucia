@@ -20,3 +20,28 @@ exitMenu[0].addEventListener('click',()=>{
     darkBackground[0].classList.remove('show');
     document.body.classList.remove('stop-scroll');
 })
+
+
+
+let normalNavigationBar = document.querySelector('.page-navigation-desktop');
+let transparentNavigationBar = document.querySelector('.whitenav');
+
+window.addEventListener('scroll',()=>{
+    if(window.innerWidth >= 1100){
+        if(window.scrollY > 0){
+            transparentNavigationBar.classList.add('HIDE_NAV');
+            transparentNavigationBar.classList.remove('SHOW_NAV');
+            normalNavigationBar.classList.add('SHOW_NAV');
+            transparentNavigationBar.style.display = 'none';
+            normalNavigationBar.style.display = 'flex';
+            normalNavigationBar.classList.remove('HIDE_NAV');
+        } else {
+            normalNavigationBar.classList.remove('SHOW_NAV');
+            normalNavigationBar.classList.add('HIDE_NAV');
+            normalNavigationBar.style.display = 'none';
+            transparentNavigationBar.classList.add('SHOW_NAV');
+            transparentNavigationBar.classList.remove('HIDE_NAV');
+            transparentNavigationBar.style.display = 'flex';
+        }
+    }
+})
