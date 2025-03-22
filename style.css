@@ -281,7 +281,7 @@ header{
 .foodsAndTitle-container{
     display: flex;
     flex-direction: column;
-    padding: clamp(60px, 8vw ,160px) 20px 0px 20px;
+    padding: clamp(80px, 8vw ,160px) 20px 0px 20px;
     /*border: 2px solid blue;*/
     gap: 30px;
     width: 100%;
@@ -315,6 +315,66 @@ header{
     width: 114px;
     height: auto;
 }
+.bottle-image{
+    height: auto;
+    width: 70px;
+    margin-left: 30px;
+}
+/*INDIVIDUAL BOTTLES*/
+.cappy{
+    width: 58px;
+    margin-left: 38px;
+}
+.timbark{
+    width: 50px;
+    margin-left: 38px;
+}
+.naturalis{
+    width: 58px;
+    margin-left: 38px;
+}
+.soda{
+    width: 55px;
+    margin-left: 38px;
+}
+.radler, .blonda{
+    width: 50px;
+    margin-left: 38px;
+}
+.fuz-tea{
+    width: 50px;
+    margin-left: 38px;
+}
+.Zhigulevskoe{
+    width: 48px;
+    margin-left: 38px;
+}
+.calarasi{
+    width: 58px;
+    margin-left: 38px;
+}
+.zernoff, .mendeleev, .ungheni{
+    margin-left: 38px;
+    width: 68px;
+}
+.timisoreana{
+    width: 50px;
+    margin-left: 38px;
+}
+.nisporeni{
+    width: 50px;
+    margin-left: 38px;
+}
+.alb-rosu{
+    width: 44px;
+    margin-left: 38px;
+}
+.vin{
+    width: 48px;
+    margin-left: 38px;
+}
+/*INDIVIDUAL BOTTLES*/
+
 .food-text-container{
     display: flex;
     flex-direction: column;
@@ -380,7 +440,7 @@ header{
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: clamp(60px, 8vw ,160px) 20px 0px 20px;
+    padding: clamp(80px, 8vw ,160px) 20px 0px 20px;
 }
 .customPizza-container{
     display: flex;
@@ -689,7 +749,7 @@ header{
 
     .foodsAndTitle-container{
         gap: 50px;
-        padding: clamp(60px, 8vw ,160px) 40px 0px 40px;
+        padding: clamp(80px, 8vw ,160px) 40px 0px 40px;
     }
     .foods-grid-container{
         display: grid;
@@ -765,7 +825,7 @@ header{
 
 
     .customPizza-padder{
-        padding: clamp(60px, 8vw ,160px) 40px 0px 40px;
+        padding: clamp(80px, 8vw ,160px) 40px 0px 40px;
     }
     .customPizza-container{
         display: flex;
