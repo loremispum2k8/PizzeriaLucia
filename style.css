@@ -447,6 +447,13 @@ header{
     width: 100%;
     padding: clamp(80px, 8vw ,160px) 20px 0px 20px;
 }
+.cariera-padder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: clamp(80px, 8vw ,160px) 20px 0px 20px;
+}
 .customPizza-container{
     display: flex;
     width: 100%;
@@ -462,7 +469,30 @@ header{
 .customPizza-container:hover{
     box-shadow: 0px 0px 35px 0px rgb(148, 148, 148);
 }
+.cariera-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background:linear-gradient(-45deg,#15aa3b 0%,#159735 50%,#0f7e2b 100%);
+    border-radius: 20px;
+    padding: 40px 0px;
+    gap: 60px;
+    box-shadow: 0px 0px 20px 0px rgb(199, 199, 199);
+    transition: all 0.1s;
+}
+.cariera-container:hover{
+    box-shadow: 0px 0px 35px 0px rgb(148, 148, 148);
+}
 .customPizza-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;;
+    gap:30px;
+    max-width: 306px;
+}
+.cariera-text{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -475,6 +505,11 @@ header{
     font-family:semiBold;
     color:White;
 }
+.cariera-title{
+    font-size: clamp(30px,5vw,46px);
+    font-family:semiBold;
+    color:White;
+}
 .customPizza-desc{
     line-height: 170%;
     font-size: 12px;
@@ -482,7 +517,19 @@ header{
     font-family: regular;
     font-weight: 400;
 }
+.cariera-desc{
+    line-height: 170%;
+    font-size: 12px;
+    color: white;
+    font-family: regular;
+    font-weight: 400;
+}
 .customPizza-desc span{
+    font-size: 14px;
+    font-family: semiBold;
+    color: white;
+}
+.cariera-desc span{
     font-size: 14px;
     font-family: semiBold;
     color: white;
@@ -517,6 +564,30 @@ header{
 .customPizza-desktop{
     display: none;
 }
+.cariera-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: white;
+    color: #159735;
+    width: 230px;
+    height: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.cariera-btn:hover{
+    transform: scale(1.03);
+}
+.cariera-btn p{
+    font-size: 14px;
+    font-family: medium;
+}
+.cariera-image{
+    width: 270px;
+}
 
 
 @media screen and (min-width:900px){
@@ -526,13 +597,32 @@ header{
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: #D7180E;
+        border-radius: 20px;
+        padding: 0px 40px 0px 0px;
+        gap: 60px;
+        height: 400px;
+    }
+    .cariera-container{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         border-radius: 20px;
         padding: 0px 40px 0px 0px;
         gap: 60px;
         height: 400px;
     }
     .customPizza-text{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align:start;
+        padding: 0px 0px 0px 40px;
+        gap:30px;
+        max-width: 450px;
+    }
+    .cariera-text{
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -551,7 +641,24 @@ header{
     .customPizza-desc span{
         font-size: clamp(14px,1.5vw,16px);
     }
+    .cariera-title{
+        font-size: clamp(30px,5vw,46px);
+
+    }
+    .cariera-desc{
+        font-size: clamp(12px,1.5vw,14px);
+    }
+    .cariera-desc span{
+        font-size: clamp(14px,1.5vw,16px);
+    }
     .customPizza-btn{
+        gap: 8px;
+        width: 230px;
+        height: 45px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    .cariera-btn{
         gap: 8px;
         width: 230px;
         height: 45px;
@@ -571,6 +678,9 @@ header{
     }
     .customPizza-desktop{
         display: none;
+    }
+    .cariera-image{
+        width: 350px;
     }
 }
 
@@ -832,6 +942,9 @@ header{
     .customPizza-padder{
         padding: clamp(80px, 8vw ,160px) 40px 0px 40px;
     }
+    .cariera-padder{
+        padding: clamp(80px, 8vw ,160px) 40px 0px 40px;
+    }
     .customPizza-container{
         display: flex;
         width: 100%;
@@ -855,15 +968,30 @@ header{
     }
     .customPizza-title{
         font-size: clamp(30px,5vw,46px);
-
+    }
+    .cariera-title{
+        font-size: clamp(30px,5vw,46px);
     }
     .customPizza-desc{
+        font-size: 14px;
+    }
+    .cariera-desc{
         font-size: 14px;
     }
     .customPizza-desc span{
         font-size: 16px
     }
+    .cariera-desc span{
+        font-size: 16px
+    }
     .customPizza-btn{
+        gap: 8px;
+        width: 230px;
+        height: 45px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    .cariera-btn{
         gap: 8px;
         width: 230px;
         height: 45px;
