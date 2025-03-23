@@ -30,7 +30,6 @@ html{
     overflow: hidden;
 }
 
-
 .cos-desktop-navigation{
     display: none;
 }
@@ -153,129 +152,256 @@ html{
     color: #9f9f9f;
 }
 
-
-.cos-container-title{
+.cariera-container-title{
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: clamp(30px, 5vw, 60px) 0px clamp(30px, 6vw, 80px) 20px;
+    padding: 60px 0px 160px 0px;
 }
-.cos-container-title h1{
+.cariera-container-title h1{
     font-size: clamp(40px,8vw,48px);
     font-family: semiBold;
 }
 
-.cos-content-container{
+.cariera-header-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
-    padding: 0px 20px;
+    gap: 45px;
 }
-.cos-content-right-side{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.cariera-page-image{
+    width: min(80vw,360px);
+    height: auto;
 }
-.comanda-container{
+.cariera-text{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    border-radius: 20px;
     gap: 30px;
-    padding: 36px 25px;
-    background-color: white;
-    box-shadow: 0px 0px 24px -2px hsla(0, 0%, 58%, 0.25);
-    transition: all 0.1s;
+    width: min(80vw,440px);
 }
-.comanda-container:hover{
-    box-shadow: 0px 0px 34px -2px hsla(0, 0%, 64%, 0.5);
-}
-.comanda-top-row{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    background:linear-gradient(to top, rgb(249, 249, 249) 0%, white 70%);
-    padding: 20px;
-    border-radius: 20px;
-}
-.comanda-top-row h2{
+.cariera-text h2{
     font-family: semiBold;
-    font-size: 22px;
+    font-size: clamp(24px, 3vw, 26px);
 }
-.comanda-preturi-container{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.livrare-container, .total-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.livrare-container p, .total-container p{
-    font-size: 14px;
+.cariera-text p{
+    line-height: 1.7;
+    font-size: (14px,5vw,16px);
     font-family: regular;
-}
-.comanda-total p{
-    font-family: semiBold;
-    font-size: 20px;
-}
-.comanda-total{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-}
-.comanda-bottom-row{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 30px;
-}
-.comanda-button{
-    display: flex;
-    background-color: #D7180E;
-    flex-direction: column;
-    height: 100px;
-    width: 100%;
-    border-radius: 100px;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    gap: 4px;
-}
-.comanda-tel{
-    font-family: regular;
-    font-weight: 400;
-    font-size: 22px;
-}
-.comanda-btn-bottom{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-}
-.comanda-btn-bottom p{
-    font-size: 18px;
-    font-family: medium;
-}
-.comanda-btn-bottom svg{
-    transform: rotateY(180deg);
-}
-.comanda-description{
+    color: #666666;
     text-align: center;
-    color: #727272;
+}
+
+
+.cariera-form-container{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.form-title{
+    font-family: semiBold;
+    width: min(50vw,450px);
+    font-size: clamp(24px, 3vw, 26px);
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: min(80vw,440px);
+}
+.form-inner-guts{
+    padding: 30px 30px;
+    background-color: white;
+    box-shadow: 0px 0px 24px -2px hsla(0, 0%, 64%, 0.25);
+    transition: all 0.1s;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.form-inner-guts:hover{
+    box-shadow: 0px 0px 34px -2px hsla(0, 0%, 65%, 0.5);
+}
+.top-form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.left-column-form, .right-column-form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.form-group label{
+    font-family: medium;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form-group label span{
     font-family: regular;
     font-size: 12px;
+    color: #9E9E9E;
+}
+.form-group input{
+    height: 48px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #F4F4F4;
+    border: 2px solid #F4F4F4;
+    font-size: 14px;
+    font-family: regular;
+    cursor: text;
+}
+.form-group input:focus{
+    border: 2px solid #dfdfdf;
+    background-color: white;
+}
+.form-group input:user-invalid{
+    border: 2px solid #e60f0f;
+    background-color: white;
+}
+.form-group input:user-valid{
+    border: 2px solid #169735;
+    background-color: white;
+}
+.form-group input:valid{
+    border: 2px solid #169735;
+    background-color: white;
+}
+.form-group input::placeholder{
+    color: #ABABAB;
+}
+.form-group select{
+    height: 48px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #F4F4F4;
+    background-color: #F4F4F4;
+    font-size: 14px;
+    font-family: regular;
+    cursor: pointer;
+}
+.form-group select:focus{
+    border: 2px solid #dfdfdf;
+    background-color: white;
+}
+.form-group select:user-invalid{
+    border: 2px solid #e60f0f;
+    background-color: white;
+}
+.form-group select:user-valid{
+    border: 2px solid #169735;
+    background-color: white;
+}
+.form-group select:valid{
+    border: 2px solid #169735;
+    background-color: white;
+}
+.form-group select option{
+    background-color: white;
+}
+textarea{
+    resize: none;
+    outline: none;
+    padding: 20px 20px;
+    border: 2px solid #F4F4F4;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+    font-size: 14px;
+    font-family: regular;
+    height: 200px;
+}
+textarea:focus{
+    border: 2px solid #dfdfdf;
+    background-color: white;
+}
+textarea:user-invalid{
+    border: 2px solid #e60f0f;
+    background-color: white;
+}
+textarea:user-valid{
+    border: 2px solid #169735;
+    background-color: white;
 }
 
 
+.submitButton{
+    align-self: center;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background-color: #169735;
+    height: 46px;
+    width: 180px;
+    font-family: medium;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.submitButton:hover{
+    background-color: #1ea73e;
+}
+
+
+.Intrebari-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    gap: 30px;
+}
+.Intrebari-container h2{
+    font-size: 24px;
+    width: min(50vw,415px);
+    font-family: semiBold;
+    text-align: center;
+}
+.intrebari-links{
+    background-color: white;
+    box-shadow: 0px 0px 24px -2px hsla(0, 0%, 64%, 0.25);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: min(80vw, 440px);
+    gap: 20px;
+    transition: all 0.1s;
+}
+.intrebari-links:hover{
+    box-shadow: 0px 0px 34px -2px hsla(0, 0%, 65%, 0.5);
+}
+.intrebari-links a, .intrebari-links p{
+    width: 100%;
+    text-align: center;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: regular;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
+}
+.intrebari-links a:hover{
+    background-color: #eeeeee;
+}
+.notouch{
+    cursor:default;
+}
 
 
 .outer-bottom{
@@ -327,7 +453,6 @@ footer{
     font-size: 14px;
     height: 52px;
 }
-
 
 @media screen and (min-width:1100px){
     .cos-desktop-navigation{
@@ -416,44 +541,128 @@ footer{
     .desktop-menus a:hover, .desktop-languages a:hover{
         color: #e91b10;
     }
-    
-    .cos-container-title{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        padding: clamp(30px, 5vw, 60px) 0px clamp(30px, 6vw, 80px) 40px;
-    }
-    
-    .cos-content-container{
+
+
+    .cariera-header-container{
         display: flex;
         flex-direction: row;
         align-items: start;
-        gap: 80px;
-        padding: 0px 40px;
+        justify-content: center;
+        gap: 100px;
     }
-    .cos-content-left-side{
+    .cariera-page-image{
+        width: 480px;
+        height: auto;
+    }
+    .cariera-text{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+        width: min(80vw,440px);
+    }
+    .cariera-text p{
+        line-height: 1.7;
+        font-size: (14px,5vw,16px);
+        font-family: regular;
+        color: #666666;
+        text-align: start;
+    }
+
+    .cariera-form-container{
+        margin-top: 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 1050px;
+    }
+    .form-inner-guts{
+        padding: 30px 30px;
+        background-color: white;
+        box-shadow: 0px 0px 24px -2px hsla(0, 0%, 64%, 0.25);
+        transition: all 0.1s;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .form-inner-guts:hover{
+        box-shadow: 0px 0px 34px -2px hsla(0, 0%, 65%, 0.5);
+    }
+    .top-form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .left-column-form, .right-column-form{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .form-title{
+        font-family: semiBold;
+        width: 1050px;
+        font-size: clamp(24px, 3vw, 26px);
+        align-self: center;
+        text-align: start;
+    }
+    .submitButton{
+        align-self: start;
+    }
+
+    .Intrebari-container{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 160px;
+        gap: 45px;
     }
-    .cos-content-right-side{
+    .Intrebari-container h2{
+        font-size: 24px;
+        width: 1050px;
+        font-family: semiBold;
+        text-align: start;
+    }
+    .intrebari-links{
+        background-color: white;
+        box-shadow: 0px 0px 24px -2px hsla(0, 0%, 64%, 0.25);
+        border-radius: 20px;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 1050px;
+        gap: 40px;
+        transition: all 0.1s;
+    }
+    .intrebari-links:hover{
+        box-shadow: 0px 0px 34px -2px hsla(0, 0%, 65%, 0.5);
+    }
+    .intrebari-links a, .intrebari-links p{
+        width: 100%;
+        text-align: center;
+        background-color: #F4F4F4;
+        border-radius: 20px;
+        font-size: 14px;
+        font-family: regular;
+        height: 46px;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 550px;
-    }
-    .comanda-container{
-        gap: 50px;
-        padding: 30px 30px 40px 30px;
-    }
-    .comanda-top-row{
-        gap: 40px;
-    }
-    .comanda-bottom-row{
-        gap: 40px;
+        transition: all 0.1s;
     }
 
 
 
-
+    
     .outer-bottom{
         display: flex;
         align-items: center;

@@ -19,6 +19,10 @@ a{
     padding: 0;
     box-sizing: border-box;
 }
+*::selection{
+    background-color: #111111;
+    color: white;
+}
 html{
     scroll-behavior: smooth;
 }
