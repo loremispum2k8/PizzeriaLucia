@@ -203,7 +203,7 @@ html{
 }
 .form-title{
     font-family: semiBold;
-    width: min(50vw,450px);
+    width: min(60vw,450px);
     font-size: clamp(24px, 3vw, 26px);
     text-align: center;
 }
@@ -365,7 +365,7 @@ textarea:user-valid{
 }
 .Intrebari-container h2{
     font-size: 24px;
-    width: min(50vw,415px);
+    width: min(60vw,415px);
     font-family: semiBold;
     text-align: center;
 }
