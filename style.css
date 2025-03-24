@@ -29,6 +29,9 @@ html{
 .stop-scroll{
     overflow: hidden;
 }
+.hiddenIncredients{
+    display: none;
+}
 .HIDE_NAV{
     animation-name: hidenav;
     animation-duration: 0.5s;

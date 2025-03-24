@@ -75,3 +75,89 @@ for(let i = 0; i<headerDots.length; i++){
         }
     })
 }
+
+
+
+
+let menuNavItems = document.getElementsByClassName('menu-box');
+console.log(menuNavItems)
+let pizzaHEIGHT = document.querySelector('#pizza');
+let pizzaCustomHEIGHT = document.querySelector('#pizzaCustom');
+let fastFoodHEIGHT = document.querySelector('#fastFood');
+let sosuriHEIGHT = document.querySelector('#sosuri');
+let bauturiHEIGHT = document.querySelector('#băuturi');
+let gusturiLaBereHEIGHT = document.querySelector('#gusturiLaBere');
+
+
+window.addEventListener('scroll',()=>{
+    //pizzaHEIGHT.getBoundingClientRect().top+window.scrollY;
+    const pizzaHeightRect = pizzaHEIGHT.getBoundingClientRect();
+    const pizzaCustomHeightRect = pizzaCustomHEIGHT.getBoundingClientRect();
+    const fastFoodRect = fastFoodHEIGHT.getBoundingClientRect();
+    const sosuriRect = sosuriHEIGHT.getBoundingClientRect();
+    const bauturiRect = bauturiHEIGHT.getBoundingClientRect();
+    const gusturiLaBereRect = gusturiLaBereHEIGHT.getBoundingClientRect();
+
+    const pizzaHeightTop = pizzaHeightRect.top + window.scrollY;
+    const pizzaHeightBottom = pizzaHeightTop + pizzaHeightRect.height;
+
+    const pizzaCustomHeightTop = pizzaCustomHeightRect.top + window.scrollY;
+    const pizzaCustomHeightBottom = pizzaCustomHeightTop + pizzaCustomHeightRect.height;
+
+    const fastFoodHeightTop = fastFoodRect.top + window.scrollY;
+    const fastFoodHeightBottom = fastFoodHeightTop + fastFoodRect.height;
+
+    const sosuriRectHeightTop = sosuriRect.top + window.scrollY;
+    const sosuriRectHeightBottom = sosuriRectHeightTop + sosuriRect.height;
+
+    const bauturiHeightTop = bauturiRect.top + window.scrollY;
+    const bauturiHeightBottom = bauturiHeightTop + bauturiRect.height;
+
+    const gusturiLaBereHeightTop = gusturiLaBereRect.top + window.scrollY;
+    const gusturiLaBereBottom = gusturiLaBereHeightTop + gusturiLaBereRect.height;
+
+    if (window.scrollY >= pizzaHeightTop && window.scrollY < pizzaHeightBottom) {
+        menuNavItems[0].classList.add('link-over');
+        for(let i=0; i<6; i++){
+            if(i!==0){
+                menuNavItems[i].classList.remove('link-over')
+            }
+        }
+    } else if (window.scrollY >= pizzaCustomHeightTop && window.scrollY < pizzaCustomHeightBottom) {
+        menuNavItems[1].classList.add('link-over');
+        for(let i=0; i<6; i++){
+            if(i!==1){
+                menuNavItems[i].classList.remove('link-over')
+            }
+        }
+    } else if (window.scrollY >= fastFoodHeightTop && window.scrollY < fastFoodHeightBottom) {
+        menuNavItems[2].classList.add('link-over');
+        for(let i=0; i<6; i++){
+            if(i!==2){
+                menuNavItems[i].classList.remove('link-over')
+            }
+        }
+    } else if (window.scrollY >= sosuriRectHeightTop && window.scrollY <= sosuriRectHeightBottom) {
+        menuNavItems[3].classList.add('link-over');
+        for(let i=0; i<6; i++){
+            if(i!==3){
+                menuNavItems[i].classList.remove('link-over')
+            }
+        }
+    } else if (window.scrollY >= bauturiHeightTop && window.scrollY <= bauturiHeightBottom) {
+        menuNavItems[4].classList.add('link-over');
+        for(let i=0; i<6; i++){
+            if(i!==4){
+                menuNavItems[i].classList.remove('link-over')
+            }
+        }
+    }else if (window.scrollY >= gusturiLaBereHeightTop && window.scrollY <= gusturiLaBereBottom) {
+        menuNavItems[5].classList.add('link-over');
+        for(let i=0; i<6; i++){
+            if(i!==5){
+                menuNavItems[i].classList.remove('link-over')
+            }
+        }
+    }
+    
+})
