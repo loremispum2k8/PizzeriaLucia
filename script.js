@@ -80,7 +80,8 @@ for(let i = 0; i<headerDots.length; i++){
 
 
 let menuNavItems = document.getElementsByClassName('menu-box');
-console.log(menuNavItems)
+
+
 let pizzaHEIGHT = document.querySelector('#pizza');
 let pizzaCustomHEIGHT = document.querySelector('#pizzaCustom');
 let fastFoodHEIGHT = document.querySelector('#fastFood');
@@ -98,22 +99,22 @@ window.addEventListener('scroll',()=>{
     const bauturiRect = bauturiHEIGHT.getBoundingClientRect();
     const gusturiLaBereRect = gusturiLaBereHEIGHT.getBoundingClientRect();
 
-    const pizzaHeightTop = pizzaHeightRect.top + window.scrollY;
+    const pizzaHeightTop = pizzaHeightRect.top + window.scrollY - 120;
     const pizzaHeightBottom = pizzaHeightTop + pizzaHeightRect.height;
 
-    const pizzaCustomHeightTop = pizzaCustomHeightRect.top + window.scrollY;
+    const pizzaCustomHeightTop = pizzaCustomHeightRect.top + window.scrollY - 120;
     const pizzaCustomHeightBottom = pizzaCustomHeightTop + pizzaCustomHeightRect.height;
 
-    const fastFoodHeightTop = fastFoodRect.top + window.scrollY;
+    const fastFoodHeightTop = fastFoodRect.top+ window.scrollY - 120;
     const fastFoodHeightBottom = fastFoodHeightTop + fastFoodRect.height;
 
-    const sosuriRectHeightTop = sosuriRect.top + window.scrollY;
+    const sosuriRectHeightTop = sosuriRect.top + window.scrollY - 120;
     const sosuriRectHeightBottom = sosuriRectHeightTop + sosuriRect.height;
 
-    const bauturiHeightTop = bauturiRect.top + window.scrollY;
-    const bauturiHeightBottom = bauturiHeightTop + bauturiRect.height;
+    const bauturiHeightTop = bauturiRect.top + window.scrollY - 120;
+    const bauturiHeightBottom = bauturiHeightTop + bauturiRect.height - 120;
 
-    const gusturiLaBereHeightTop = gusturiLaBereRect.top + window.scrollY;
+    const gusturiLaBereHeightTop = gusturiLaBereRect.top + window.scrollY - 120;
     const gusturiLaBereBottom = gusturiLaBereHeightTop + gusturiLaBereRect.height;
 
     if (window.scrollY >= pizzaHeightTop && window.scrollY < pizzaHeightBottom) {
@@ -137,21 +138,21 @@ window.addEventListener('scroll',()=>{
                 menuNavItems[i].classList.remove('link-over')
             }
         }
-    } else if (window.scrollY >= sosuriRectHeightTop && window.scrollY <= sosuriRectHeightBottom) {
+    } else if (window.scrollY >= sosuriRectHeightTop && window.scrollY < sosuriRectHeightBottom) {
         menuNavItems[3].classList.add('link-over');
         for(let i=0; i<6; i++){
             if(i!==3){
                 menuNavItems[i].classList.remove('link-over')
             }
         }
-    } else if (window.scrollY >= bauturiHeightTop && window.scrollY <= bauturiHeightBottom) {
+    } else if (window.scrollY >= bauturiHeightTop && window.scrollY < bauturiHeightBottom) {
         menuNavItems[4].classList.add('link-over');
         for(let i=0; i<6; i++){
             if(i!==4){
                 menuNavItems[i].classList.remove('link-over')
             }
         }
-    }else if (window.scrollY >= gusturiLaBereHeightTop && window.scrollY <= gusturiLaBereBottom) {
+    }else if (window.scrollY >= gusturiLaBereHeightTop && window.scrollY < gusturiLaBereBottom) {
         menuNavItems[5].classList.add('link-over');
         for(let i=0; i<6; i++){
             if(i!==5){
