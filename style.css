@@ -10,6 +10,10 @@
     font-family: semiBold;
     src: url(fonts//ReadexPro-SemiBold.ttf);
 }
+@font-face {
+    font-family: light;
+    src: url(fonts//ReadexPro-Light.ttf);
+}
 a{
     text-decoration: none;
     color: initial;
@@ -742,6 +746,227 @@ footer{
 }
 
 
+.comanda-popup-container{
+    z-index: 99999;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.dark-background{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #707070b3;
+    backdrop-filter: blur(2px);
+}
+.comanda-popup{
+    position: absolute;
+    overflow: hidden;
+    background-color: white;
+    padding: 30px;
+    color: black;
+    border-radius: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.imagine-comanda{
+    rotate: 90deg;
+    position: absolute;
+    top: 0;
+    margin-top: -110px;
+    margin-left: 20px;
+    width: 170px;
+}
+.comanda-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.comanda-top svg{
+    cursor: pointer;
+}
+.comanda-information{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 140px;
+}
+.comanda-text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.comanda-title{
+    font-size: 24px;
+    font-family: regular;
+    font-weight: 500;
+}
+.comanda-description{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6px;
+    width: min(200px);
+}
+.comanda-greutate, .line{
+    font-family: regular;
+    font-size: 14px;
+    color: #727272;
+}
+.comanda-incrediente{
+    font-size: 14px;
+    font-family: light;
+    line-height: 170%;
+    color:#727272;
+}
+.optiuni-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.optiune{
+    display: flex;
+    flex: row;
+    gap: 7px;
+}
+.optiune input{
+    appearance: none;
+    cursor: pointer;
+}
+.optiune input:after{
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-top: 4px;
+        position: relative;
+        background-color: #ffffff;
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid black;
+}
+.optiune input:checked::after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 4px;
+    position: relative;
+    background-color: #159735;
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #159735;
+}
+.optiune label{
+    font-size: 14px;
+    color: #727272;
+    font-family: regular;
+    margin-left: 5px;
+}
+.pret, .comanda-lei{
+    font-size: 16px;
+    font-family: medium;
+}
+.comanda-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.priceAndQuantity-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-price-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: medium;
+    font-size: 24px
+}
+.quantiy-Container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 120px;
+    gap: 20px;
+    border-radius: 50px;
+    border: 1px solid #727272;
+}
+.quantiy-Container svg{
+    cursor: pointer;
+    color: #159735;
+}
+.CANTITATE_UNIVERSALA{
+    font-size: 18px;
+    font-family: medium;
+}
+.comanda-submit-button-inactive{
+    height: 48px;
+    width: 280px;
+    border: none;
+    background-color: #7c7c7c;
+    width: 100%;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    font-family: medium;
+    cursor: no-drop;
+}
+.comanda-submit-button-active{
+    height: 48px;
+    width: 280px;
+    border: none;
+    background-color: #159735;
+    width: 100%;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    font-family: medium;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+.comanda-submit-button-active:hover{
+    background-color: #1bae40;
+}
+
+.HIDE_COMANDA{
+    animation-name: hidecomanda;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.SHOW_COMANDA{
+    animation-name: showcomanda;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes hidecomanda{
+    0%{opacity: 100%;}
+    100%{opacity: 0%;}
+}
+@keyframes showcomanda{
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+
+
+
+
 @media screen and (min-width:900px){
     .customPizza-container{
         display: flex;
@@ -1229,4 +1454,171 @@ footer{
     footer{
         margin-bottom: 0px;
     }
+
+
+
+
+    .comanda-popup{
+        justify-content: space-between;
+        width: 820px;
+        height: 420px;
+        padding: 40px;
+    }
+    .imagine-comanda{
+        rotate: 0deg;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top:-50px;
+        margin-left:0px;
+        width: 200px;
+    }
+    .comanda-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        width: 100%;
+        gap: 80px;
+    }
+    .comanda-information{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: 380px;
+        padding-top: 0px;
+    }
+    .comanda-text{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .comanda-title{
+        font-size: 26px;
+    }
+    .comanda-description{
+        gap: 6px;
+        width: 100%;
+    }
+    .comanda-greutate, .line{
+        font-family: regular;
+        font-size: 16px;
+    }
+    .comanda-incrediente{
+        font-size: 16px;
+    }
+    .optiuni-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .optiune{
+        gap: 10px;
+    }
+    .optiune input{
+        appearance: none;
+        cursor: pointer;
+    }
+    .optiune input:after{
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-top: 4px;
+            position: relative;
+            background-color: #ffffff;
+            display: inline-block;
+            visibility: visible;
+            border: 1px solid black;
+    }
+    .optiune input:checked::after{
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-top: 4px;
+        position: relative;
+        background-color: #159735;
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid #159735;
+    }
+    .optiune label{
+        font-size: 16px;
+        color: #727272;
+        font-family: regular;
+        margin-left: 5px;
+    }
+    .pret, .comanda-lei{
+        font-size: 18px;
+        font-family: medium;
+    }
+    .comanda-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+    }
+    .priceAndQuantity-container{
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main-price-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        font-family: medium;
+        font-size: 26px
+    }
+    .quantiy-Container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 120px;
+        gap: 20px;
+        border-radius: 50px;
+        border: 1px solid #727272;
+    }
+    .quantiy-Container svg{
+        cursor: pointer;
+        color: #159735;
+    }
+    .CANTITATE_UNIVERSALA{
+        font-size: 18px;
+        font-family: medium;
+    }
+    .comanda-submit-button-inactive{
+        height: 48px;
+        width: 180px;
+        border: none;
+        background-color: #7c7c7c;
+        border-radius: 50px;
+        color: white;
+        font-size: 16px;
+        font-family: medium;
+        cursor: no-drop;
+    }
+    .comanda-submit-button-active{
+        height: 48px;
+        width: 180px;
+        border: none;
+        background-color: #159735;
+        border-radius: 50px;
+        color: white;
+        font-size: 16px;
+        font-family: medium;
+        transition: all 0.1s;
+        cursor: pointer;
+    }
+    .comanda-submit-button-active:hover{
+        background-color: #1bae40;
+    }
+    
 }

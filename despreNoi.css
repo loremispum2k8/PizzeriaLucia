@@ -192,6 +192,59 @@ html{
     color: #666666;
     text-align: center;
 }
+
+
+
+
+.Intrebari-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    gap: 30px;
+}
+.Intrebari-container h2{
+    font-size: 24px;
+    width: min(60vw,415px);
+    font-family: semiBold;
+    text-align: center;
+}
+.intrebari-links{
+    background-color: white;
+    box-shadow: 0px 0px 24px -2px hsla(0, 0%, 64%, 0.25);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: min(80vw, 440px);
+    gap: 20px;
+    transition: all 0.1s;
+}
+.intrebari-links:hover{
+    box-shadow: 0px 0px 34px -2px hsla(0, 0%, 65%, 0.5);
+}
+.intrebari-links a, .intrebari-links p{
+    width: 100%;
+    text-align: center;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: regular;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
+}
+.intrebari-links a:hover{
+    background-color: #eeeeee;
+}
+.notouch{
+    cursor:default;
+}
+
+
 .outer-bottom{
     display: flex;
     align-items: center;
@@ -241,6 +294,7 @@ footer{
     font-size: 14px;
     height: 52px;
 }
+
 
 @media screen and (min-width:1100px){
     .cos-desktop-navigation{
@@ -364,5 +418,48 @@ footer{
         color: black;
         font-family: medium;
         font-size: 14px;
+    }
+
+    .Intrebari-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 160px;
+        gap: 45px;
+    }
+    .Intrebari-container h2{
+        font-size: 24px;
+        width: 1050px;
+        font-family: semiBold;
+        text-align: start;
+    }
+    .intrebari-links{
+        background-color: white;
+        box-shadow: 0px 0px 24px -2px hsla(0, 0%, 64%, 0.25);
+        border-radius: 20px;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 1050px;
+        gap: 40px;
+        transition: all 0.1s;
+    }
+    .intrebari-links:hover{
+        box-shadow: 0px 0px 34px -2px hsla(0, 0%, 65%, 0.5);
+    }
+    .intrebari-links a, .intrebari-links p{
+        width: 100%;
+        text-align: center;
+        background-color: #F4F4F4;
+        border-radius: 20px;
+        font-size: 14px;
+        font-family: regular;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.1s;
     }
 }
