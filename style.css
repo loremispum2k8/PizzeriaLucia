@@ -767,7 +767,7 @@ footer{
     position: absolute;
     overflow: hidden;
     background-color: white;
-    padding: 30px;
+    padding: 50px 30px 30px 30px;
     color: black;
     border-radius: 20px;
     width: 80%;
@@ -781,7 +781,7 @@ footer{
     top: 0;
     margin-top: -110px;
     margin-left: 20px;
-    width: 170px;
+    width: clamp(150px, 30vw ,170px);
 }
 .comanda-top{
     display: flex;
