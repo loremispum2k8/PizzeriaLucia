@@ -748,10 +748,9 @@ footer{
 
 .comanda-popup-container{
     z-index: 99999;
-    position: absolute;
-    top: 0;
-    left:0;
+    position: fixed;
     width: 100%;
+    top: 0;
     height: 100%;
     display: none;
     align-items: center;
@@ -957,7 +956,7 @@ footer{
 }
 @keyframes hidecomanda{
     0%{opacity: 100%;}
-    100%{opacity: 0%;}
+    100%{opacity: 0%; display: none;}
 }
 @keyframes showcomanda{
     0%{opacity: 0%;}

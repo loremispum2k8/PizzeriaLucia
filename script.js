@@ -165,4 +165,30 @@ window.addEventListener('scroll',()=>{
 
 
 
+let comandaPopUp = document.querySelector('.comanda-popup-container')
+let exitComandaPopUp = document.querySelector('.exitComanda');
+/*let adaugaButton = document.getElementsByClassName("addButton");
+for(let i = 0; i++; i<adaugaButton.length-1){
+    adaugaButton[i].addEventListener('click',()=>{
+        console.log('clicked')
+        comandaPopUp.style.display='flex';
+        comandaPopUp.classList.add('SHOW_COMANDA');
+    })
+}*/
 
+let adaugaButton = document.querySelectorAll('.addButton');
+adaugaButton.forEach((button)=>{
+    button.addEventListener('click',()=>{
+        console.log('pressed');
+        comandaPopUp.style.display='flex';
+        comandaPopUp.classList.remove('HIDE_COMANDA');
+        comandaPopUp.classList.add('SHOW_COMANDA');
+        document.body.classList.add('stop-scroll');
+    })
+})
+
+exitComandaPopUp.addEventListener('click',()=>{
+    comandaPopUp.classList.remove('SHOW_COMANDA');
+    comandaPopUp.classList.add('HIDE_COMANDA');
+    document.body.classList.remove('stop-scroll');
+})
