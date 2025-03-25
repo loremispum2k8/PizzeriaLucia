@@ -796,7 +796,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding-top: 140px;
+    padding-top: 130px;
 }
 .comanda-text{
     display: flex;
