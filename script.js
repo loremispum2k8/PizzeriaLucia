@@ -186,8 +186,6 @@ let INDIVIDUAL_TOTAL_PRICE;
 let growQuantity = document.querySelector('.growQuantity')
 let lowerQuantity = document.querySelector('.lowerQuantity')
 
-console.log(growQuantity)
-
 growQuantity.addEventListener('click',()=>{
     QUANTITY++;
     quantityComanda.textContent = QUANTITY;
@@ -244,6 +242,7 @@ adaugaButton.forEach((button)=>{
                 FINAL_ADD_BUTTON_COMANDA.classList.add('comanda-submit-button-active')
                 FINAL_ADD_BUTTON_COMANDA.classList.remove('comanda-submit-button-inactive')
                 INDIVIDUAL_TOTAL_PRICE = option.parentElement.children[2].textContent;
+                QUANTITY =  quantityComanda.textContent;
                 console.log(INDIVIDUAL_TOTAL_PRICE);
                 console.log(QUANTITY)
                 pretUniversal.textContent = INDIVIDUAL_TOTAL_PRICE * QUANTITY;
