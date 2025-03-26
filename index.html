@@ -21,7 +21,6 @@
 <div class="comanda-popup-container">
     <div class="dark-background"></div>
     <div class="comanda-popup">
-        <img class="imagine-comanda" src="images/pizza/1.webp" alt="imagine-comanda">
         <div class="comanda-top">
             <div class="comanda-information">
                <div class="comanda-text">
@@ -29,24 +28,6 @@
                     <div class="comanda-description"><p class="wrapper"><span class="comanda-greutate">650g</span><span class="line"> - </span><span class="comanda-incrediente">Aluat, Sos, Pizza, Fileu de Pui, Mozzarella</span></p></div>
                </div>
                <form class="optiuni-container">
-                    <div class="optiune">
-                        <input type="radio" id="standart" name="optiune">
-                        <label for="standart">Standart:</label>
-                        <p class="pret">90</p>
-                        <p class="comanda-lei">lei</p>
-                    </div>
-                    <div class="optiune">
-                        <input type="radio" id="medium" name="optiune">
-                        <label for="medium">Mediu:</label>
-                        <p class="pret">150</p>
-                        <p class="comanda-lei">lei</p>
-                    </div>
-                    <div class="optiune">
-                        <input type="radio" id="mare" name="optiune">
-                        <label for="mare">Mare:</label>
-                        <p class="pret">180</p>
-                        <p class="comanda-lei">lei</p>
-                    </div>
                </form>
             </div>
             <svg class="exitComanda" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M6.793 6.793a1 1 0 0 1 1.414 0L12 10.586l3.793-3.793a1 1 0 1 1 1.414 1.414L13.414 12l3.793 3.793a1 1 0 0 1-1.414 1.414L12 13.414l-3.793 3.793a1 1 0 0 1-1.414-1.414L10.586 12L6.793 8.207a1 1 0 0 1 0-1.414" clip-rule="evenodd"/></svg>
@@ -54,16 +35,16 @@
         <div class="comanda-bottom">
             <div class="priceAndQuantity-container">
                <div class="main-price-container">
-                    <p class="PRET_UNIVERSAL">180</p>
+                    <p class="PRET_UNIVERSAL">0</p>
                     <p class="main-lei">lei</p>
                </div>
                <div class="quantiy-Container">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg>
+                    <div class="svg-class lowerQuantity"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg></div>
                     <p class="CANTITATE_UNIVERSALA">1</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"/></svg>
+                    <div class="svg-class growQuantity"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"/></svg></div>
                </div>
             </div>
-            <button class="comanda-submit-button-inactive">Adaugă în coș</button>
+            <button class="finalAddBtn comanda-submit-button-inactive">Adaugă în coș</button>
         </div>
     </div>
 </div>
@@ -745,8 +726,8 @@
                 <div class="food-text-container">
                     <div class="nameAndWeight">
                         <h3 class="food-name">Pizza Carbonara</h3>
-                        <p class="hiddenIncredients">Aluat, Sos Pizza, Mozzarela, Pastramă, Ou, Ciuperci</p>
                         <p class="food-weight">---g</p>
+                        <p class="hiddenIncredients">Aluat, Sos Pizza, Mozzarela, Pastramă, Ou, Ciuperci</p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -899,6 +880,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Kebab</h3>
                         <p class="food-weight">470g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -915,6 +897,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Kebab în Chiflă</h3>
                         <p class="food-weight">500g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -931,6 +914,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Kebab la Farfurie</h3>
                         <p class="food-weight">400g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -947,6 +931,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Piadina</h3>
                         <p class="food-weight">200g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -964,6 +949,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Cheeseburger</h3>
                         <p class="food-weight">180g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -980,6 +966,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Hamburgher</h3>
                         <p class="food-weight">150g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -996,6 +983,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Hot Dog</h3>
                         <p class="food-weight">1 bucată</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1012,6 +1000,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Nughete de Pui</h3>
                         <p class="food-weight">---g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1029,6 +1018,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Cartofi Fri</h3>
                         <p class="food-weight">150g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1045,6 +1035,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Mici</h3>
                         <p class="food-weight">2 bucăți</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1061,6 +1052,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Salată de Varză</h3>
                         <p class="food-weight">200g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1077,6 +1069,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Salată de Roșii</h3>
                         <p class="food-weight">200g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1101,6 +1094,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Sos Ketchup</h3>
                         <p class="food-weight">40g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1117,6 +1111,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Sos Muștar</h3>
                         <p class="food-weight">40g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1133,6 +1128,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Sos Maioneză</h3>
                         <p class="food-weight">40g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1149,6 +1145,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Sos de Usturoi</h3>
                         <p class="food-weight">40g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1173,6 +1170,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Espresso</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options"> 
                         <div class="individual-option">
@@ -1189,6 +1187,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Americano</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1205,6 +1204,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Capucino</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1221,6 +1221,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Americano cu Lapte</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1238,6 +1239,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Ciocolată Caldă</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1254,6 +1256,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Ceai</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1274,6 +1277,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Ceai Natural</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1290,6 +1294,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Queens</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1307,6 +1312,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Vita</h3>
                         <p class="food-weight">250 ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1323,6 +1329,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Cappy</h3>
                         <p class="food-weight">330 ml / 1000 ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1343,6 +1350,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Timbark</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1359,6 +1367,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Naturalis</h3>
                         <p class="food-weight">200 ml / 1000 ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1380,6 +1389,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Fanta</h3>
                         <p class="food-weight">250 ml / 500 ml / 1000ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1404,6 +1414,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Coca Cola</h3>
                         <p class="food-weight">250 ml / 500 ml / 1000ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1428,6 +1439,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Sprite</h3>
                         <p class="food-weight">250 ml / 500 ml / 1000ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1452,6 +1464,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Dorna</h3>
                         <p class="food-weight">500 ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1470,6 +1483,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Schweppes</h3>
                         <p class="food-weight">330 ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1486,6 +1500,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Fuz-Teaa</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1502,6 +1517,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Chișinău Radler</h3>
                         <p class="food-weight">500 ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1518,6 +1534,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Chișinău Blondă</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1535,6 +1552,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Timișoreana</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1551,6 +1569,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Oettinger</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1567,6 +1586,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Zhigulevskoe</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1583,6 +1603,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Kozel</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1600,6 +1621,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Bere la Halbă</h3>
                         <p class="food-weight">330 ml / 500 ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1620,6 +1642,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Cvas la Halbă</h3>
                         <p class="food-weight">330 ml / 500 ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1640,6 +1663,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Gin-Tonic</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1656,6 +1680,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Sidr Golden Leaf</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1674,6 +1699,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Zernoff</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1690,6 +1716,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Mendeleev</h3>
                         <p class="food-weight">-- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1706,6 +1733,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Ungheni 5 ani</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1722,6 +1750,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Călărași</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1740,6 +1769,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Nisporeni</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1756,6 +1786,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Cricova</h3>
                         <p class="food-weight">-- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1772,6 +1803,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Sauvignon alb demidulce</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1788,6 +1820,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Cabarnet roșu/roz seci</h3>
                         <p class="food-weight">--- ml</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1813,6 +1846,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Banzai Arahide</h3>
                         <p class="food-weight">--g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1829,6 +1863,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Banzai Duo-Crunch</h3>
                         <p class="food-weight">--g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1849,6 +1884,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Leo Dor-Sticks</h3>
                         <p class="food-weight">--g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">
@@ -1865,6 +1901,7 @@
                     <div class="nameAndWeight">
                         <h3 class="food-name">Leo Dor-Grenki</h3>
                         <p class="food-weight">--g</p>
+                        <p class="hiddenIncredients"></p>
                     </div>
                     <div class="food-options">
                         <div class="individual-option">

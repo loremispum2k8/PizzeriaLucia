@@ -775,14 +775,6 @@ footer{
     flex-direction: column;
     gap: 40px;
 }
-.imagine-comanda{
-    rotate: 90deg;
-    position: absolute;
-    top: 0;
-    margin-top: -110px;
-    margin-left: -50px;
-    width: 170px;
-}
 .comanda-top{
     display: flex;
     flex-direction: row;
@@ -796,7 +788,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding-top: 130px;
+    padding-top: 0px;
 }
 .comanda-text{
     display: flex;
@@ -900,18 +892,31 @@ footer{
     align-items: center;
     justify-content: center;
     height: 40px;
-    width: 120px;
+    width: 130px;
     gap: 20px;
     border-radius: 50px;
     border: 1px solid #727272;
+}.svg-class{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.growQuantity{
+    margin-right: 20px;
+}
+.lowerQuantity{
+    margin-left: 20px;
 }
 .quantiy-Container svg{
     cursor: pointer;
     color: #159735;
+    width: 20px;
 }
 .CANTITATE_UNIVERSALA{
     font-size: 18px;
     font-family: medium;
+    width: 50px;
+    text-align: center;
 }
 .comanda-submit-button-inactive{
     height: 48px;
@@ -1457,53 +1462,61 @@ footer{
 
 
 
+
     .comanda-popup{
-        justify-content: space-between;
-        width: 820px;
-        height: 420px;
-        padding: 40px;
-    }
-    .imagine-comanda{
-        rotate: 0deg;
         position: absolute;
-        top: 0;
-        left: 0;
-        margin-top:-50px;
-        margin-left:0px;
-        width: 200px;
+        overflow: hidden;
+        background-color: white;
+        padding: 50px 40px 40px 40px;
+        color: black;
+        border-radius: 20px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
     .comanda-top{
         display: flex;
         flex-direction: row;
-        justify-content: end;
+        justify-content: space-between;
         width: 100%;
-        gap: 80px;
+    }
+    .comanda-top svg{
+        cursor: pointer;
     }
     .comanda-information{
         display: flex;
         flex-direction: column;
-        gap: 60px;
-        width: 380px;
+        gap: 40px;
         padding-top: 0px;
     }
     .comanda-text{
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
     }
     .comanda-title{
         font-size: 26px;
+        font-family: regular;
+        font-weight: 500;
     }
     .comanda-description{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         gap: 6px;
-        width: 100%;
+        width: min(200px);
     }
     .comanda-greutate, .line{
         font-family: regular;
-        font-size: 16px;
+        font-size: 14px;
+        color: #727272;
     }
     .comanda-incrediente{
-        font-size: 16px;
+        font-size: 14px;
+        font-family: light;
+        line-height: 170%;
+        color:#727272;
     }
     .optiuni-container{
         display: flex;
@@ -1511,7 +1524,9 @@ footer{
         gap: 10px;
     }
     .optiune{
-        gap: 10px;
+        display: flex;
+        flex: row;
+        gap: 7px;
     }
     .optiune input{
         appearance: none;
@@ -1519,8 +1534,8 @@ footer{
     }
     .optiune input:after{
             content: '';
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
             margin-top: 4px;
             position: relative;
@@ -1531,8 +1546,8 @@ footer{
     }
     .optiune input:checked::after{
         content: '';
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
         border-radius: 50%;
         margin-top: 4px;
         position: relative;
@@ -1542,27 +1557,24 @@ footer{
         border: 1px solid #159735;
     }
     .optiune label{
-        font-size: 16px;
+        font-size: 14px;
         color: #727272;
         font-family: regular;
         margin-left: 5px;
     }
     .pret, .comanda-lei{
-        font-size: 18px;
+        font-size: 16px;
         font-family: medium;
     }
     .comanda-bottom{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        gap: 20px;
+        flex-direction: column;
+        gap: 30px;
     }
     .priceAndQuantity-container{
         display: flex;
         flex-direction: row;
-        width: fit-content;
-        flex-grow: 1;
+        width: 100%;
         justify-content: space-between;
         align-items: center;
     }
@@ -1572,7 +1584,7 @@ footer{
         align-items: center;
         gap: 10px;
         font-family: medium;
-        font-size: 26px
+        font-size: 24px
     }
     .quantiy-Container{
         display: flex;
@@ -1580,7 +1592,7 @@ footer{
         align-items: center;
         justify-content: center;
         height: 40px;
-        width: 120px;
+        width: 130px;
         gap: 20px;
         border-radius: 50px;
         border: 1px solid #727272;
@@ -1595,9 +1607,10 @@ footer{
     }
     .comanda-submit-button-inactive{
         height: 48px;
-        width: 180px;
+        width: 280px;
         border: none;
         background-color: #7c7c7c;
+        width: 100%;
         border-radius: 50px;
         color: white;
         font-size: 16px;
@@ -1606,9 +1619,10 @@ footer{
     }
     .comanda-submit-button-active{
         height: 48px;
-        width: 180px;
+        width: 280px;
         border: none;
         background-color: #159735;
+        width: 100%;
         border-radius: 50px;
         color: white;
         font-size: 16px;
@@ -1616,8 +1630,4 @@ footer{
         transition: all 0.1s;
         cursor: pointer;
     }
-    .comanda-submit-button-active:hover{
-        background-color: #1bae40;
-    }
-    
 }

@@ -3,7 +3,6 @@ let menuBurger = document.getElementsByClassName('showMenu');
 let menu = document.getElementsByClassName('menu-popup');
 let exitMenu = document.getElementsByClassName('closeMenu');
 
-
 menuBurger[0].addEventListener('click',()=>{
     menu[0].classList.remove('hideMenu');
     menu[0].classList.add('showMenu');
@@ -167,19 +166,94 @@ window.addEventListener('scroll',()=>{
 
 let comandaPopUp = document.querySelector('.comanda-popup-container')
 let exitComandaPopUp = document.querySelector('.exitComanda');
-/*let adaugaButton = document.getElementsByClassName("addButton");
-for(let i = 0; i++; i<adaugaButton.length-1){
-    adaugaButton[i].addEventListener('click',()=>{
-        console.log('clicked')
-        comandaPopUp.style.display='flex';
-        comandaPopUp.classList.add('SHOW_COMANDA');
-    })
-}*/
-
 let adaugaButton = document.querySelectorAll('.addButton');
+
+let titluComanda = document.querySelector('.comanda-title');
+let greutateComanda = document.querySelector('.comanda-greutate');
+let incredienteComanda = document.querySelector('.comanda-incrediente');
+let pretUniversal = document.querySelector('.PRET_UNIVERSAL');
+let butonComanda = document.querySelector('.finalAddBtn');
+let optiuniContainerComanda = document.querySelector('.optiuni-container');
+let quantityComanda = document.querySelector('.CANTITATE_UNIVERSALA');
+let optionsCount;
+
+let buttonKey = 0;
+
+let PRICE_OF_ONE;
+let QUANTITY = 1;
+let INDIVIDUAL_TOTAL_PRICE;
+
+let growQuantity = document.querySelector('.growQuantity')
+let lowerQuantity = document.querySelector('.lowerQuantity')
+
+console.log(growQuantity)
+
+growQuantity.addEventListener('click',()=>{
+    QUANTITY++;
+    quantityComanda.textContent = QUANTITY;
+    if(buttonKey === 1){
+        pretUniversal.textContent = INDIVIDUAL_TOTAL_PRICE * QUANTITY;
+    }
+})
+lowerQuantity.addEventListener('click',()=>{
+    if( QUANTITY > 1){
+        QUANTITY--;
+        quantityComanda.textContent = QUANTITY;
+        if(buttonKey === 1){
+            pretUniversal.textContent = INDIVIDUAL_TOTAL_PRICE * QUANTITY;
+        }
+    }
+})
+
+let newOption;
+let newInput;
+let newLabel;
+let newPrice;
+let newLei;
+
+
+let FINAL_ADD_BUTTON_COMANDA = document.querySelector('.finalAddBtn')
+
 adaugaButton.forEach((button)=>{
     button.addEventListener('click',()=>{
-        console.log('pressed');
+        let titluComandaCONTENT = button.parentElement.children[0].children[0].textContent;
+        let greutateComandaCONTENT =  button.parentElement.children[0].children[1].textContent;
+        let incredienteComandaCONTENT = button.parentElement.children[0].children[2].textContent
+        optionsCount = button.parentElement.children[1].children.length;
+        for(let i=0;i<optionsCount;i++){
+            let optionSizeComandaCONTENT = button.parentElement.children[1].children[i].children[0].textContent.split('').slice(0,-1).join('').toLowerCase();
+            let optionPriceComandaCONTENT = button.parentElement.children[1].children[i].children[1].textContent.split('').slice(0,-4).join('').toLocaleLowerCase();
+
+            newOption = document.createElement('div'); newOption.classList.add('optiune');
+            newInput = document.createElement('input'); newInput.setAttribute('type','radio'); newInput.setAttribute('id',optionSizeComandaCONTENT); newInput.setAttribute('name','optiune'); newInput.classList.add('detectorForQuery')
+            newLabel = document.createElement('label'); newLabel.setAttribute('for', optionSizeComandaCONTENT); newLabel.textContent = button.parentElement.children[1].children[i].children[0].textContent;
+            newPrice = document.createElement('p'); newPrice.classList.add('pret'); newPrice.textContent = optionPriceComandaCONTENT
+            newLei = document.createElement('p'); newLei.classList.add('comanda-lei'); newLei.textContent = 'lei';
+            newOption.appendChild(newInput);
+            newOption.appendChild(newLabel);
+            newOption.appendChild(newPrice);
+            newOption.appendChild(newLei);
+
+            optiuniContainerComanda.appendChild(newOption);
+        }
+
+        let possibleOptions = document.querySelectorAll('.detectorForQuery');
+        possibleOptions.forEach((option)=>{
+            option.addEventListener('click',()=>{
+                buttonKey = 1;
+                FINAL_ADD_BUTTON_COMANDA.classList.add('comanda-submit-button-active')
+                FINAL_ADD_BUTTON_COMANDA.classList.remove('comanda-submit-button-inactive')
+                INDIVIDUAL_TOTAL_PRICE = option.parentElement.children[2].textContent;
+                console.log(INDIVIDUAL_TOTAL_PRICE);
+                console.log(QUANTITY)
+                pretUniversal.textContent = INDIVIDUAL_TOTAL_PRICE * QUANTITY;
+            })
+        })
+
+        titluComanda.textContent = titluComandaCONTENT;
+        greutateComanda.textContent = greutateComandaCONTENT;
+        incredienteComanda.textContent = incredienteComandaCONTENT;
+
         comandaPopUp.style.display='flex';
         comandaPopUp.classList.remove('HIDE_COMANDA');
         comandaPopUp.classList.add('SHOW_COMANDA');
@@ -191,4 +265,12 @@ exitComandaPopUp.addEventListener('click',()=>{
     comandaPopUp.classList.remove('SHOW_COMANDA');
     comandaPopUp.classList.add('HIDE_COMANDA');
     document.body.classList.remove('stop-scroll');
+    optiuniContainerComanda.innerHTML='';
+    QUANTITY = 1;
+    quantityComanda.textContent = QUANTITY;
+    FINAL_ADD_BUTTON_COMANDA.classList.add('comanda-submit-button-inactive')
+    FINAL_ADD_BUTTON_COMANDA.classList.remove('comanda-submit-button-active');
+    QUANTITY = 0;
+    INDIVIDUAL_TOTAL_PRICE = 0;
+    pretUniversal.textContent = 0;
 })
