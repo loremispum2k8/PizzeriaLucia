@@ -22,12 +22,12 @@ let basket = document.querySelector('.basket-number');
 
 cosDelete.forEach((element)=>{
     element.addEventListener('click',()=>{
-        localStorage.setItem('HTMLinjection',cosMainContainer.innerHTML)
         let deleteMoneyQuantity = element.parentElement.parentElement.children[1].children[0].children[0].children[0].textContent;
-        localStorage.setItem('totalProducsCost',(localStorage.getItem('totalProducsCost'))-deleteMoneyQuantity);
         let provizoriu = localStorage.getItem('totalProducsCost');
-        basket.textContent = provizoriu-deleteMoneyQuantity;
+        localStorage.setItem('totalProducsCost',(localStorage.getItem('totalProducsCost'))-deleteMoneyQuantity);
+        basket.textContent = provizoriu - deleteMoneyQuantity;
         element.parentElement.parentElement.parentElement.remove();
+        localStorage.setItem('HTMLinjection',cosMainContainer.innerHTML)
 
         
         
