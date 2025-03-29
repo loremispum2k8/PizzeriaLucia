@@ -183,14 +183,23 @@ html{
     align-items: center;
     padding: 30px 20px 30px 0px;
     display: flex;
-    border-top: 1px solid #D8D8D8;
-    border-bottom: 1px solid #D8D8D8;
-    gap: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px -2px hsla(0, 0%, 71%, 0.25);
+    transition: all 0.1s;
+    gap: 40px;
     width: 100%;
     height: 230px;
 }
+.cos-option:hover{
+box-shadow: 0px 0px 28px -2px hsla(0, 0%, 68%, 0.5);
+}
 .cos-image{
     width: 100px;
+}
+.cos-drink-image{
+    height: 100%;
+    width: auto;
+    margin-left: 20px;
 }
 .deleteOption{
     cursor: pointer;
@@ -202,11 +211,14 @@ html{
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    width: 100%;
 }
 .cos-option-top{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 50px;
+    width: 100%;
 }
 .cos-option-text{
     display: flex;
@@ -253,7 +265,7 @@ html{
     align-items: center;
     justify-content: center;
     height: 40px;
-    width: 120px;
+    width: 50px;
     gap: 20px;
     border-radius: 50px;
     border: 1px solid #727272;
@@ -262,6 +274,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .cosGrowQuantity{
     margin-right: 20px;
@@ -531,7 +544,23 @@ footer{
         width: 100%;
         padding: clamp(30px, 5vw, 60px) 0px clamp(30px, 6vw, 80px) 40px;
     }
-    
+    .cos-option{
+        padding: 40px 40px 40px 0px;
+        gap: 70px;
+        height: 265px;
+    }
+    .cos-option-title{
+        font-size: 20px;
+    }
+    .cos-wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 14px;
+        font-family: regular;
+        gap: 8px;
+        color: #727272;
+    }
     .cos-content-container{
         display: flex;
         flex-direction: row;
@@ -557,6 +586,13 @@ footer{
     }
     .comanda-bottom-row{
         gap: 40px;
+    }
+    .COS-INDIVIDUAL-PRICE{
+        font-family: regular;
+        font-size: 20px;
+    }
+    .lei{
+        font-size: 18px;
     }
 
 
@@ -597,5 +633,10 @@ footer{
         color: black;
         font-family: medium;
         font-size: 14px;
+    }
+    .cos-drink-image{
+        height: 100%;
+        width: auto;
+        margin-left: 40px;
     }
 }

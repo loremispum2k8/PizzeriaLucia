@@ -208,18 +208,23 @@ let newInput;
 let newLabel;
 let newPrice;
 let newLei;
+let newImage;
 
-//LOCAL_STORAGE//
-localStorage.setItem('HTMLinjection','');
-//LOCAL_STORAGE//
+let FINAL_ADD_BUTTON_COMANDA = document.querySelector('.finalAddBtn');
 
-let FINAL_ADD_BUTTON_COMANDA = document.querySelector('.finalAddBtn')
+
+let titluComandaCONTENT
+let greutateComandaCONTENT 
+let incredienteComandaCONTENT
+let sizeCONTENT;
 
 adaugaButton.forEach((button)=>{
     button.addEventListener('click',()=>{
-        let titluComandaCONTENT = button.parentElement.children[0].children[0].textContent;
-        let greutateComandaCONTENT =  button.parentElement.children[0].children[1].textContent;
-        let incredienteComandaCONTENT = button.parentElement.children[0].children[2].textContent
+        titluComandaCONTENT = button.parentElement.children[0].children[0].textContent;
+        greutateComandaCONTENT =  button.parentElement.children[0].children[1].textContent;
+        incredienteComandaCONTENT = button.parentElement.children[0].children[2].textContent;
+        //COS IMAGE
+        newImage = button.parentElement.parentElement.children[0].getAttribute('src');
         optionsCount = button.parentElement.children[1].children.length;
         for(let i=0;i<optionsCount;i++){
             let optionSizeComandaCONTENT = button.parentElement.children[1].children[i].children[0].textContent.split('').slice(0,-1).join('').toLowerCase();
@@ -247,6 +252,7 @@ adaugaButton.forEach((button)=>{
                 INDIVIDUAL_TOTAL_PRICE = option.parentElement.children[2].textContent;
                 QUANTITY =  quantityComanda.textContent;
                 pretUniversal.textContent = INDIVIDUAL_TOTAL_PRICE * QUANTITY;
+                sizeCONTENT = option.parentElement.children[1];
             })
         })
 
@@ -264,7 +270,6 @@ adaugaButton.forEach((button)=>{
 })
 
 
-console.log(butonComanda)
 exitComandaPopUp.addEventListener('click',()=>{
     comandaPopUp.classList.remove('SHOW_COMANDA');
     comandaPopUp.classList.add('HIDE_COMANDA');
@@ -280,10 +285,16 @@ exitComandaPopUp.addEventListener('click',()=>{
 })
 
 
-//ADD //ADD //ADD 
 
+
+//ADD //ADD //ADD 
+if(localStorage.getItem('totalProducsCost') === null){
+    localStorage.setItem('HTMLinjection', '');
+}
 butonComanda.addEventListener('click',()=>{
     if(buttonKey === 1){
+
+        //PRICE
         const pastTotalPrice = Number(localStorage.getItem('totalProducsCost'));
         console.log('Price: ',Number(INDIVIDUAL_TOTAL_PRICE));
         console.log('Quantity', Number(QUANTITY));
@@ -295,17 +306,77 @@ butonComanda.addEventListener('click',()=>{
             total.textContent = localStorage.getItem('totalProducsCost')
         })
 
+                //INJECTION
+
+                function createOption(){
+                    let outerHtmlContainer = document.createElement('div');
+                    
+                    let optionContainer = document.createElement('div'); optionContainer.classList.add('cos-option');
+                    let optionImage = document.createElement('img'); optionImage.classList.add('cos-image'); optionImage.setAttribute('alt', 'imagine produs'); optionImage.setAttribute('src',newImage); optionContainer.appendChild(optionImage);
+                    if(optionImage.getAttribute('src').includes('bauturiMici')){
+                        optionImage.classList.add('cos-drink-image')
+                    }
+                    if(optionImage.getAttribute('src').includes('gustăriLaBere')){
+                        optionImage.classList.add('cos-drink-image')
+                    }
+
+                    let optionRightContainer = document.createElement('div'); optionRightContainer.classList.add('cos-option-right-container'); optionContainer.appendChild(optionRightContainer);
+                    
+                    let optionTop = document.createElement('div'); optionTop.classList.add('cos-option-top'); optionRightContainer.appendChild(optionTop);
+                    let optionText = document.createElement('div'); optionText.classList.add('cos-option-text'); optionTop.appendChild(optionText);
+                    let optionTitle = document.createElement('div'); optionTitle.classList.add('cos-option-title'); optionTitle.textContent = titluComandaCONTENT; optionText.appendChild(optionTitle);
+                    let optionWrapper = document.createElement('p'); optionWrapper.classList.add('cos-wrapper'); optionText.appendChild(optionWrapper);
+                    let wrapperSpan = document.createElement('span'); wrapperSpan.classList.add('cos-greutate'); wrapperSpan.textContent = greutateComandaCONTENT; optionWrapper.appendChild(wrapperSpan);
+                    let lineSpan = document.createElement('span'); lineSpan.textContent = ' - '; optionWrapper.appendChild(lineSpan);
+                    let optionSize = document.createElement('span'); optionSize.classList.add('cos-size');  optionSize.textContent = sizeCONTENT.textContent; optionWrapper.appendChild(optionSize);
+                    let optionSvg = document.createElement('svg'); optionSvg.classList.add('deleteOption'); optionSvg.setAttribute('xmlns','http://www.w3.org/2000/svg'); optionSvg.setAttribute('width','24'); optionSvg.setAttribute('height','24'); optionSvg.setAttribute('viewBox','0 0 24 24'); optionTop.appendChild(optionSvg)
+                    let SvgPath = document.createElement('path'); SvgPath.setAttribute('fill','none'); SvgPath.setAttribute('fill','none'); SvgPath.setAttribute('stroke','currentColor'); SvgPath.setAttribute('stroke-linecap','round'); SvgPath.setAttribute('stroke-linejoin','round'); SvgPath.setAttribute('stroke-width','2'); SvgPath.setAttribute('d','m7 7l10 10M7 17L17 7'); optionSvg.appendChild(SvgPath)
+                    
+                    let optionBottom = document.createElement('div'); optionBottom.classList.add('cos-option-bottom'); optionRightContainer.appendChild(optionBottom);
+                    let cosOptionDown = document.createElement('div'); cosOptionDown.classList.add('cos-option-down'); optionBottom.appendChild(cosOptionDown);
+                    let cosLeiContainer = document.createElement('div'); cosLeiContainer.classList.add('cos-lei-container'); cosOptionDown.appendChild(cosLeiContainer);
+                    let COS_INDIVIDUAL_PRICE = document.createElement('h2'); COS_INDIVIDUAL_PRICE.classList.add('COS-INDIVIDUAL-PRICE'); COS_INDIVIDUAL_PRICE.textContent = String(Number(INDIVIDUAL_TOTAL_PRICE) * Number(QUANTITY)); cosLeiContainer.appendChild(COS_INDIVIDUAL_PRICE);
+                    let lei = document.createElement('h2'); lei.classList.add('lei'); lei.textContent = 'lei'; cosLeiContainer.appendChild(lei);
+        
+                    let cos_quantiy_Container = document.createElement('div'); cos_quantiy_Container.classList.add('cos-quantiy-Container'); optionBottom.appendChild(cos_quantiy_Container);
+                    //let svgLowerDiv = document.createElement('div'); svgLowerDiv.classList.add('svg-class'); svgLowerDiv.classList.add('cosLowerQuantity'); cos_quantiy_Container.appendChild(svgLowerDiv);
+                    //let svgLow = document.createElement('svg'); svgLow.setAttribute('xmlns','http://www.w3.org/2000/svg'); svgLow.setAttribute('width','20'); svgLow.setAttribute('height','20'); svgLow.setAttribute('viewBox','0 0 24 24'); svgLowerDiv.appendChild(svgLow);
+                    //let svgLowPATH = document.createElement('path'); svgLowPATH.setAttribute('fill','currentColor'); svgLowPATH.setAttribute('d','M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2'); svgLow.appendChild(svgLowPATH);
+                    let CANTITATE_UNIVERSALA = document.createElement('p'); CANTITATE_UNIVERSALA.classList.add('CANTITATE_UNIVERSALA'); CANTITATE_UNIVERSALA.textContent = QUANTITY; cos_quantiy_Container.appendChild(CANTITATE_UNIVERSALA);
+                    //let svgGrowDiv = document.createElement('div'); svgGrowDiv.classList.add('svg-class'); svgGrowDiv.classList.add('cosGrowQuantity'); cos_quantiy_Container.appendChild(svgGrowDiv);
+                    //let svgGrow = document.createElement('svg'); svgGrow.setAttribute('xmlns','http://www.w3.org/2000/svg'); svgGrow.setAttribute('width','20'); svgGrow.setAttribute('height','20'); svgGrow.setAttribute('viewBox','0 0 24 24'); svgGrowDiv.appendChild(svgGrow);
+                    //let svgGrowPATH = document.createElement('path'); svgGrowPATH.setAttribute('fill','currentColor'); svgGrowPATH.setAttribute('d','M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2'); svgGrow.appendChild(svgGrowPATH)
+                    
+                    outerHtmlContainer.appendChild(optionContainer)
+                    return  outerHtmlContainer.innerHTML;
+                }
+        
+                if(localStorage.getItem('totalProducsCost') === null){
+                    localStorage.setItem('HTMLinjection', '');
+                } else {
+                    localStorage.setItem('HTMLinjection', (localStorage.getItem('HTMLinjection') + createOption()));
+                }
+                
+                console.log(localStorage.getItem('HTMLinjection'))
+        
         comandaPopUp.classList.remove('SHOW_COMANDA');
-    comandaPopUp.classList.add('HIDE_COMANDA');
-    document.body.classList.remove('stop-scroll');
-    optiuniContainerComanda.innerHTML='';
-    QUANTITY = 1;
-    quantityComanda.textContent = QUANTITY;
-    FINAL_ADD_BUTTON_COMANDA.classList.add('comanda-submit-button-inactive')
-    FINAL_ADD_BUTTON_COMANDA.classList.remove('comanda-submit-button-active');
-    QUANTITY = 0;
-    INDIVIDUAL_TOTAL_PRICE = 0;
-    pretUniversal.textContent = 0;
+        comandaPopUp.classList.add('HIDE_COMANDA');
+        document.body.classList.remove('stop-scroll');
+        optiuniContainerComanda.innerHTML='';
+        QUANTITY = 1;
+        quantityComanda.textContent = QUANTITY;
+        FINAL_ADD_BUTTON_COMANDA.classList.add('comanda-submit-button-inactive')
+        FINAL_ADD_BUTTON_COMANDA.classList.remove('comanda-submit-button-active');
+        QUANTITY = 0;
+        INDIVIDUAL_TOTAL_PRICE = 0;
+        pretUniversal.textContent = 0;
+    }
+})
+visibileTotal.forEach((total)=>{
+    if(localStorage.getItem('totalProducsCost') !== null){
+        total.textContent = localStorage.getItem('totalProducsCost');
+    } else {
+        total.textContent = 0;
     }
 })
 
