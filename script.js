@@ -21,7 +21,6 @@ exitMenu[0].addEventListener('click',()=>{
 })
 
 
-
 let normalNavigationBar = document.querySelector('.page-navigation-desktop');
 let transparentNavigationBar = document.querySelector('.whitenav');
 
@@ -175,6 +174,7 @@ let pretUniversal = document.querySelector('.PRET_UNIVERSAL');
 let butonComanda = document.querySelector('.finalAddBtn');
 let optiuniContainerComanda = document.querySelector('.optiuni-container');
 let quantityComanda = document.querySelector('.CANTITATE_UNIVERSALA');
+let visibileTotal = document.querySelectorAll('.basket-number');
 let optionsCount;
 
 let buttonKey = 0;
@@ -209,6 +209,9 @@ let newLabel;
 let newPrice;
 let newLei;
 
+//LOCAL_STORAGE//
+localStorage.setItem('HTMLinjection','');
+//LOCAL_STORAGE//
 
 let FINAL_ADD_BUTTON_COMANDA = document.querySelector('.finalAddBtn')
 
@@ -243,8 +246,6 @@ adaugaButton.forEach((button)=>{
                 FINAL_ADD_BUTTON_COMANDA.classList.remove('comanda-submit-button-inactive')
                 INDIVIDUAL_TOTAL_PRICE = option.parentElement.children[2].textContent;
                 QUANTITY =  quantityComanda.textContent;
-                console.log(INDIVIDUAL_TOTAL_PRICE);
-                console.log(QUANTITY)
                 pretUniversal.textContent = INDIVIDUAL_TOTAL_PRICE * QUANTITY;
             })
         })
@@ -257,9 +258,13 @@ adaugaButton.forEach((button)=>{
         comandaPopUp.classList.remove('HIDE_COMANDA');
         comandaPopUp.classList.add('SHOW_COMANDA');
         document.body.classList.add('stop-scroll');
+
     })
+
 })
 
+
+console.log(butonComanda)
 exitComandaPopUp.addEventListener('click',()=>{
     comandaPopUp.classList.remove('SHOW_COMANDA');
     comandaPopUp.classList.add('HIDE_COMANDA');
@@ -273,3 +278,36 @@ exitComandaPopUp.addEventListener('click',()=>{
     INDIVIDUAL_TOTAL_PRICE = 0;
     pretUniversal.textContent = 0;
 })
+
+
+//ADD //ADD //ADD 
+
+butonComanda.addEventListener('click',()=>{
+    if(buttonKey === 1){
+        const pastTotalPrice = Number(localStorage.getItem('totalProducsCost'));
+        console.log('Price: ',Number(INDIVIDUAL_TOTAL_PRICE));
+        console.log('Quantity', Number(QUANTITY));
+        console.log('Individual total: ',Number(INDIVIDUAL_TOTAL_PRICE) * Number(QUANTITY))
+        console.log('Past: ',pastTotalPrice)
+        console.log('New: ',Number(INDIVIDUAL_TOTAL_PRICE) * Number(QUANTITY) + pastTotalPrice)
+        localStorage.setItem('totalProducsCost', Number(INDIVIDUAL_TOTAL_PRICE) * Number(QUANTITY) + pastTotalPrice);
+        visibileTotal.forEach((total)=>{
+            total.textContent = localStorage.getItem('totalProducsCost')
+        })
+
+        comandaPopUp.classList.remove('SHOW_COMANDA');
+    comandaPopUp.classList.add('HIDE_COMANDA');
+    document.body.classList.remove('stop-scroll');
+    optiuniContainerComanda.innerHTML='';
+    QUANTITY = 1;
+    quantityComanda.textContent = QUANTITY;
+    FINAL_ADD_BUTTON_COMANDA.classList.add('comanda-submit-button-inactive')
+    FINAL_ADD_BUTTON_COMANDA.classList.remove('comanda-submit-button-active');
+    QUANTITY = 0;
+    INDIVIDUAL_TOTAL_PRICE = 0;
+    pretUniversal.textContent = 0;
+    }
+})
+
+//ADD //ADD //ADD 
+                                //localStorage.clear();
