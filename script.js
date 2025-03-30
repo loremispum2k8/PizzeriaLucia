@@ -252,7 +252,8 @@ adaugaButton.forEach((button)=>{
                 INDIVIDUAL_TOTAL_PRICE = option.parentElement.children[2].textContent;
                 QUANTITY =  quantityComanda.textContent;
                 pretUniversal.textContent = INDIVIDUAL_TOTAL_PRICE * QUANTITY;
-                sizeCONTENT = option.parentElement.children[1];
+                sizeCONTENT = option.parentElement.children[1].textContent;
+                console.log(sizeCONTENT)
             })
         })
 
@@ -326,9 +327,9 @@ butonComanda.addEventListener('click',()=>{
                     let optionText = document.createElement('div'); optionText.classList.add('cos-option-text'); optionTop.appendChild(optionText);
                     let optionTitle = document.createElement('div'); optionTitle.classList.add('cos-option-title'); optionTitle.textContent = titluComandaCONTENT; optionText.appendChild(optionTitle);
                     let optionWrapper = document.createElement('p'); optionWrapper.classList.add('cos-wrapper'); optionText.appendChild(optionWrapper);
-                    let wrapperSpan = document.createElement('span'); wrapperSpan.classList.add('cos-greutate'); wrapperSpan.textContent = greutateComandaCONTENT; optionWrapper.appendChild(wrapperSpan);
-                    let lineSpan = document.createElement('span'); lineSpan.textContent = ' - '; optionWrapper.appendChild(lineSpan);
-                    let optionSize = document.createElement('span'); optionSize.classList.add('cos-size');  optionSize.textContent = sizeCONTENT.textContent; optionWrapper.appendChild(optionSize);
+                    //let wrapperSpan = document.createElement('span'); wrapperSpan.classList.add('cos-greutate'); /***/ optionWrapper.appendChild(wrapperSpan);
+                    //let lineSpan = document.createElement('span'); lineSpan.textContent = ' - '; optionWrapper.appendChild(lineSpan);
+                    let optionSize = document.createElement('span'); optionSize.classList.add('cos-size');  optionSize.textContent = sizeCONTENT; optionWrapper.appendChild(optionSize);
                     let optionSvg = document.createElement('svg'); optionSvg.classList.add('deleteOption'); optionSvg.setAttribute('xmlns','http://www.w3.org/2000/svg'); optionSvg.setAttribute('width','24'); optionSvg.setAttribute('height','24'); optionSvg.setAttribute('viewBox','0 0 24 24'); optionTop.appendChild(optionSvg)
                     let SvgPath = document.createElement('path'); SvgPath.setAttribute('fill','none'); SvgPath.setAttribute('fill','none'); SvgPath.setAttribute('stroke','currentColor'); SvgPath.setAttribute('stroke-linecap','round'); SvgPath.setAttribute('stroke-linejoin','round'); SvgPath.setAttribute('stroke-width','2'); SvgPath.setAttribute('d','m7 7l10 10M7 17L17 7'); optionSvg.appendChild(SvgPath)
                     
