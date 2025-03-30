@@ -296,6 +296,72 @@ footer{
 }
 
 
+
+.despreNoi-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    width: min(80vw, 440px);
+    justify-self: center;
+    margin-top: 60px;
+}
+.despreNoi-title{
+    font-size: 26px;
+    font-family: regular;
+}
+.map-location-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#map{
+    width: 100%;
+    height: 380px;
+}
+.location{
+    font-size: 14px;
+    font-family: regular;
+    justify-self: end;
+    align-self: end;
+}
+
+
+.despreNoi-table{
+    border-collapse: separate;
+    border: 1px solid #ebebeb;
+    border-spacing: 0;
+    border-radius: 24px;
+}
+td{
+}
+.top{
+    border-radius: 20px 20px 0px 0px;
+}
+.bottom{
+    border-radius: 0px 0px 20px 20px;
+}
+.topDiv{
+    border-radius: 20px 20px 0px 0px;
+}
+.bottomDiv{
+    border-radius: 0px 0px 20px 20px;
+}
+tr:nth-child(odd){
+    background-color: #ebebeb;
+}
+td div{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: regular;
+}
+
+
+
+
 @media screen and (min-width:1100px){
     .cos-desktop-navigation{
         display: flex;
@@ -462,4 +528,69 @@ footer{
         justify-content: center;
         transition: all 0.1s;
     }
+
+
+    .despreNoi-container{
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        width: 100%;
+        width: 1050px;
+        justify-self: center;
+        margin-top: 100px;
+    }
+    .despreNoi-title{
+        font-size: 28px;
+        font-family: regular;
+    }
+    .map-location-container{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    #map{
+        width: 100%;
+        height: 460px;
+    }
+    .location{
+        font-size: 16px;
+        font-family: regular;
+        justify-self: end;
+        align-self: end;
+    }
+
+
+
+    .despreNoi-table{
+        border-collapse: separate;
+        border: 1px solid #ebebeb;
+        border-spacing: 0;
+        border-radius: 24px;
+    }
+    td{
+    }
+    .top{
+        border-radius: 20px 20px 0px 0px;
+    }
+    .bottom{
+        border-radius: 0px 0px 20px 20px;
+    }
+    .topDiv{
+        border-radius: 20px 20px 0px 0px;
+    }
+    .bottomDiv{
+        border-radius: 0px 0px 20px 20px;
+    }
+    tr:nth-child(odd){
+        background-color: #ebebeb;
+    }
+    td div{
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 16px;
+        font-family: regular;
+    }
+    
 }
