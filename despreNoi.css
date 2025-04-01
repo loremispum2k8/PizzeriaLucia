@@ -333,8 +333,6 @@ footer{
     border-spacing: 0;
     border-radius: 24px;
 }
-td{
-}
 .top{
     border-radius: 20px 20px 0px 0px;
 }
@@ -566,8 +564,6 @@ td div{
         border: 1px solid #ebebeb;
         border-spacing: 0;
         border-radius: 24px;
-    }
-    td{
     }
     .top{
         border-radius: 20px 20px 0px 0px;

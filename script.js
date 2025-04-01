@@ -382,4 +382,4 @@ visibileTotal.forEach((total)=>{
 })
 
 //ADD //ADD //ADD 
-                                localStorage.clear();
+                                //localStorage.clear();
