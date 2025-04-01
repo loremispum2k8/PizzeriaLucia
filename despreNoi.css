@@ -309,6 +309,7 @@ footer{
 .despreNoi-title{
     font-size: 26px;
     font-family: regular;
+    text-align: center;
 }
 .map-location-container{
     display: flex;
@@ -540,6 +541,7 @@ td div{
     .despreNoi-title{
         font-size: 28px;
         font-family: regular;
+        text-align: start;
     }
     .map-location-container{
         display: flex;
