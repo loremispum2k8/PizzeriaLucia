@@ -814,7 +814,7 @@ footer{
 }
 .comanda-incrediente{
     font-size: 14px;
-    font-family: light;
+    font-family: regular;
     line-height: 170%;
     color:#727272;
 }
@@ -1514,7 +1514,7 @@ footer{
     }
     .comanda-incrediente{
         font-size: 14px;
-        font-family: light;
+        font-family: regular;
         line-height: 170%;
         color:#727272;
     }
